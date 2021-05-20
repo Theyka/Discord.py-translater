@@ -1,3 +1,3 @@
-# Discord.py Translator
+# Discord.py Translater
 
 translates every message sent on discord :)
