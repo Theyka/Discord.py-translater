@@ -30,7 +30,10 @@ class Chat(commands.Cog):
                 t = b.translate(to='tr')
                 embed = discord.Embed(description=f"{t}", color=0x03fc28)
                 embed.set_footer(text="French (FR) > Türkçe (TR)")
-
+            elif lang == "es":
+                t = b.translate(to='tr')
+                embed = discord.Embed(description=f"{t}", color=0x03fc28)
+                embed.set_footer(text="Spanish (ES) > Türkçe (TR)")
                 
             await message.reply(embed=embed, mention_author=False)
 
