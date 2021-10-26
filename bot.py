@@ -21,7 +21,17 @@ for cog in [f for f in listdir("cogs") if isfile(join("cogs", f))]:
 		except Exception as e:
 			print(f"Eklenemedi - {cog}: {e}")
 
+@bot.command()
+async def roll(ctx, dice: str):
+    """Zar atma"""
+    try:
+        rolls, limit = map(int, dice.split('d'))
+    except Exception:
+        await ctx.send('Düzgün sayı seç')
+        return
 
+    result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
+    await ctx.send(result)
 
 async def console():
 	cmd = await ainput(">>> ")
