@@ -21,12 +21,6 @@ for cog in [f for f in listdir("cogs") if isfile(join("cogs", f))]:
 		except Exception as e:
 			print(f"Eklenemedi - {cog}: {e}")
 
-@bot.command()
-async def repeat(ctx, times: int, content='repeating...'):
-    """Bir mesajı çokça tekrar ettirme."""
-    for i in range(times):
-        await ctx.send(content)
-
 async def console():
 	cmd = await ainput(">>> ")
 	await console()
